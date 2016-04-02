@@ -1,6 +1,9 @@
 Learning step by step
 =====================
 
+手把手教你
+==========
+
 .. toctree::
    :maxdepth: 1
    :name: toc-step-by-step
