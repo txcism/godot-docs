@@ -3,8 +3,14 @@
 Scenes and nodes
 ================
 
+场景和节点
+==========
+
 Introduction
 ------------
+
+介绍
+----
 
 .. image:: /img/chef.png
 
@@ -13,10 +19,16 @@ You are a chef! Change your hipster outfit for a toque and a double
 breasted jacket. Now, instead of making games, you create new and
 delicious recipes for your guests.
 
+想象一下你不是一个游戏开发者，而是一个厨师！你时髦的衣服换成了无边帽和双排扣夹克。
+现在你正在为你的顾客创造一份美味的菜谱，而不是制作游戏。
+
 So, how does a chef create a recipe? Recipes are divided in two
 sections, the first is the ingredients and the second is the
 instructions to prepare it. This way, anyone can follow the recipe and
 savor your magnificent creation.
+
+所以，一个厨师是怎样制作一份菜谱的？菜谱通常由两部分构成，首先是食材，
+然后是制作步骤。这样子，任何人只要遵从菜谱的方法都能
 
 Making games in Godot feels pretty much the same way. Using the engine
 feels like being in a kitchen. In this kitchen, *nodes* are like a
