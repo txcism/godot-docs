@@ -27,70 +27,114 @@ sections, the first is the ingredients and the second is the
 instructions to prepare it. This way, anyone can follow the recipe and
 savor your magnificent creation.
 
-所以，一个厨师是怎样制作一份菜谱的？菜谱通常由两部分构成，首先是食材，
-然后是制作步骤。这样子，任何人只要遵从菜谱的方法都能
+所以，一个厨师是怎样制作一份菜谱的？菜谱通常由两部分构成，一是食材，二是制作步骤。
+这样子，任何人只要遵从菜谱上指南就都能品尝到你高超的厨艺。
 
 Making games in Godot feels pretty much the same way. Using the engine
 feels like being in a kitchen. In this kitchen, *nodes* are like a
 refrigerator full of fresh ingredients to cook with.
 
+在Godot中制作游戏的感觉和这一样。使用引擎的感觉就像身处厨房。在这个厨房里，*节点*
+就像塞满新鲜食材的冰箱。
+
 There are many types of nodes, some show images, others play sound,
 other nodes display 3D models, etc. There's dozens of them.
 
+节点有很多类型，一些显示图片，一些播放声音，另一些则展示3D模型，等等。总之，有一大把。
+
 Nodes
+-----
+
+节点
 -----
 
 But let's go to the basics. A node is a basic element for creating a
 game, it has the following characteristics:
 
+让我们从最基本的开始。一个节点是制作游戏的基本的元素，它有下列特征：
+
 -  Has a name.
+-  有一个名字
 -  Has editable properties.
+-  有可编辑的属性
 -  Can receive a callback to process every frame.
+-  能够接收回调
 -  Can be extended (to have more functions).
+-  能够被扩展
 -  Can be added to other nodes as children.
+-  能够作为子节点添加到其它节点
 
 .. image:: /img/tree.png
 
 The last one is very important. Nodes can have other nodes as
 children. When arranged in this way, the nodes become a **tree**.
 
+最后一点很重要。节点能包含其它作为子节点的节点。节点以这样的方式组成一棵**节点树**。
+
 In Godot, the ability to arrange nodes in this way creates a powerful
 tool for organizing the projects. Since different nodes have different
 functions, combining them allows to create more complex functions.
+
+在Godot引擎里面，这种组织节点的方式成为一个组织工程的强有力工具。
+不同的节点可以拥有不同的函数，将节点合并起来就可以生成更加复杂的函数。
 
 This is probably not clear yet and it makes little sense, but everything
 will click a few sections ahead. The most important fact to remember for
 now is that nodes exist and can be arranged this way.
 
+要你现在明白这一点似乎为时过早。不过，最重要的是记住节点是以这样存在和被组织起来的。
+
 Scenes
 ------
+
+场景
+----
 
 .. image:: /img/scene_tree_example.png
 
 Now that the existence of nodes has been defined, the next logical
 step is to explain what a Scene is.
 
+节点已经说的差不多了，下一步解释一下啥叫场景。
+
 A scene is composed of a group of nodes organized hierarchically (in
 tree fashion). It has the following properties:
 
+一个场景由一组节点构成，其中这些节点以层次的方式组织起来（像一棵树那样）。
+场景有下列属性：
+
 -  A scene always has only one root node.
+-  一个场景有且只有一个根节点
 -  Scenes can be saved to disk and loaded back.
+-  场景能被保存到磁盘，或从磁盘中导出来
 -  Scenes can be *instanced* (more on that later).
+-  场景能被 *实列化* （待会儿详解）
 -  Running a game means running a scene.
+-  运行一个游戏也就是意味着运行一个场景
 -  There can be several scenes in a project, but for it to start, one of
    them must selected to be loaded first.
+-  一个工程里面可以存在多个场景，但要开始，其中一个场景必须被先加载进来
 
 Basically, the Godot editor is a **scene editor**. It has plenty of
 tools for editing 2D and 3D scenes as well as user interfaces, but all
 the editor revolves around the concept of editing a scene and the nodes
 that compose it.
 
+可以说，Godot编辑器就是一个 **场景编辑器** 。编辑器包含很多工具用来编辑2D或3D场景以及
+用户界面。所有的编辑器都为编辑场景而生。
+
 Creating a new project
 ----------------------
+
+创建一个新的项目
+----------------
 
 Theory is boring, so let's change subject and go practical. Following a
 long tradition in tutorials, the first project will be a hello world.
 For this, the editor will be used.
+
+理论是枯燥的，就让我们动手大干一场，实践出真知吧。按照国际惯例，第一个项目
+必须是 hello world 。我们将用到刚刚讲到的编辑器。
 
 When godot executable is run outside a project, the Project Manager
 appears. This helps developers manage their projects.
