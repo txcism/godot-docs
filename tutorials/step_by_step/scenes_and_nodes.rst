@@ -139,19 +139,30 @@ For this, the editor will be used.
 When godot executable is run outside a project, the Project Manager
 appears. This helps developers manage their projects.
 
+从项目外启动godot，项目管理器将弹出来。它帮助开发者管理他们的项目。
+
 .. image:: /img/project_manager.png
 
 To create a new project, the "New Project" option must be used. Choose
 and create a path for the project and specify the project name:
+
+为了创建一个新的项目，点击‘New Project’选项。为项目创建一个文件路径，并且
+取个响亮的项目名字：
 
 .. image:: /img/create_new_project.png
 
 Editor
 ------
 
+编辑器
+------
+
 Once the "New Project" is created, the next step is opening it. This
 will open the Godot editor. Here is how the editor looks when freshly
 opened:
+
+一旦新的项目被创建，接着就是打开它。为此Godot编辑器将会打开，下面就是
+编辑器最初打开的样子：
 
 .. image:: /img/empty_editor.png
 
@@ -160,19 +171,31 @@ kitchen, so let's open the refrigerator and add some fresh nodes to the
 project. We'll begin with a Hello World! To do this, the "New Node"
 button must be pressed:
 
+就像我们前面提到过的那样，在Godot中制作游戏就像在厨房里制作美味佳肴，
+我们打开“冰箱”，从中拿出一些新鲜的节点添加到我们的项目中来。没错，我们
+开始制作我们的第一个游戏了！点击“New Node”按钮来添加节点：
+
 .. image:: /img/newnode_button.png
 
 This will open the Create Node dialog, showing the long list of nodes
 that can be created:
+
+新建节点对话框将会被打开，其中显示了很长一列可以被创建的节点。
 
 .. image:: /img/node_classes.png
 
 From there, select the "Label" node first. Searching for it is probably
 the quickest way:
 
+首先，我们打算从中选择“Label”节点。与其一个个寻找，
+不如在Search框中搜索它可能更快：
+
 .. image:: /img/node_search_label.png
 
 And finally, create the Label! A lot happens when Create is pressed:
+
+找到“Label”节点之后，点击“Create”按钮，至此我们就创建了一个标签（Label）！
+我们点击“Create”按钮时发生了很多事情：
 
 .. image:: /img/editor_with_label.png
 
@@ -180,26 +203,40 @@ First of all, the scene is changed to the 2D editor (because Label is
 a 2D Node type), and the Label appears, selected, at the top left
 corner of the viewport.
 
+首先，场景变成了2D编辑器（因为标签属于2D节点类型），标签出现，并且被选中，
+位于视窗的左上角。
+
 The node appears in the scene tree editor (box in the top left
 corner), and the label properties appear in the Inspector (box on the
 right side).
 
+新建的节点显现在场景树编辑器中（位于左上角的盒子），标签节点的属性显现于
+检视器中（右边的盒子）。
+
 The next step will be to change the "Text" Property of the label, let's
 change it to "Hello, World!":
+
+接下来我们来修改一下标签的的“Text”属性，让我们把它的值改为“Hello, World!”:
 
 .. image:: /img/hw.png
 
 Ok, everything's ready to run the scene! Press the PLAY SCENE Button on
 the top bar (or hit F6):
 
+万事具备，我们来运行一下场景！点击上面的 “PLAY SCENE” 按钮（或者按 F6）:
+
 .. image:: /img/playscene.png
 
 Aaaand... Oops.
+
+啊，好像有什么不对。。。
 
 .. image:: /img/neversaved.png
 
 Scenes need to be saved to be run, so save the scene to something like
 hello.scn in Scene -> Save:
+
+嘿嘿，场景在运行之前需要保存，所以我们先将场景保存在hello.scn中：
 
 .. image:: /img/save_scene.png
 
@@ -211,17 +248,30 @@ operations in Godot, remember that "res://" is the resource path, and no
 matter the platform or install location, it is the way to locate where
 resource files are from inside the game.
 
+噢噢，一些有趣的事情发生了。我们看到的文件对话框是一个特殊的文件对话框，
+它只允许我们把文件存放在项目里面。项目的根文件路径是 "res://" ，意思是资源文件
+路径。也就意味着文件只能保存到这个项目里面。以后我们在Godot中操作文件的时候，
+要记住 "res://" 是资源文件路径，而不管它运行在何种平台或者安装在何处。在游戏中，
+我们就是通过这种方式定位资源文件路径的。
+
 After saving the scene and pressing run scene again, the "Hello, World!"
 demo should finally execute:
+
+保存场景之后，再次点击运行场景按钮，"Hello, World!"演示最终应该运行起来：
 
 .. image:: /img/helloworld.png
 
 Success!
 
+恭喜，你成功了！
+
 .. _doc_scenes_and_nodes-configuring_the_project:
 
 Configuring the project
 -----------------------
+
+配置项目
+--------
 
 Ok, It's time to do some configuration to the project. Right now, the
 only way to run something is to execute the current scene. Projects,
@@ -229,39 +279,67 @@ however, have several scenes so one of them must be set as the main
 scene. This scene is the one that will be loaded at the time the project
 is run.
 
+现在，是时候对项目来做一些配置了。到目前位置，我们运行的唯一方式就是运行当前的
+场景。但是一个项目是由很多场景组成的，所以我们需要把一个场景设为主场景。
+主场景也就是当项目运行起来的时候第一个被加载进来的场景。
+
 These settings are all stored in the engine.cfg file, which is a
 plaintext file in win.ini format, for easy editing. There are dozens of
 settings that can be set in that file to alter how a project executes,
 so to make matters simpler, a project setting dialog exists, which is
 sort of a frontend to editing engine.cfg
 
+这些设置都保存在 engine.cfg 文件中。为了便于编辑，这个文件是一个 win.ini
+格式的文本文件。在这个文件中有非常多的设置可以用来改变项目的运行方式。
+简单起见，通过项目设置对话框，我们可以轻松修改 engine.cfg文件。
+
 To access that dialog, simply go to Scene -> Project Settings.
+
+为了打开这个对话框，只需要依次点击 Scene -> Project Settings 。
 
 Once the window opens, the task will be to select a main scene. This can
 be done easily by changing the application/main_scene property and
 selecting 'hello.scn'.
+
+打开对话框后，我们需要设置一个主场景。找到 application/main_scene 属性，
+然后将它设置为 "hello.scn" 即可。
 
 .. image:: /img/main_scene.png
 
 With this change, pressing the regular Play button (or F5) will run the
 project, no matter which scene is being edited.
 
+通过这番设置后，不管现在正在编辑哪个，我们点击通常的 Play 按钮（或者 F5）
+都会运行这个项目。
+
 Going back to the project settings dialog. This dialog provides a lot
 of options that can be added to engine.cfg and show their default
 values. If the default value is ok, then there isn't any need to
 change it.
 
+让我们回到项目设置对话框。看一眼发现它提供了很多的选项以及相应的默认值。
+如果选项的默认值正合你意，你当然就无需修改它咯。
+
 When a value is changed, a tick is marked to the left of the name.
 This means that the property will be saved to the engine.cfg file and
 remembered.
+
+而如果我们改变了属性的值，那么在它名字的左边就会显示一个钩。这意味着
+这个属性将被保存到 engine.cfg 文件中。
 
 As a side note, for future reference and a little out of context (this
 is the first tutorial after all!), it is also possible to add custom
 configuration options and read them in run-time using the
 :ref:`Globals <class_Globals>` singleton.
 
+多说一句，通过使用单例 :ref:`Globals <class_Globals>` ，在运行时修改和
+读取配置选项也是可能的。
+
 To be continued...
 ------------------
+
+待续。。。
+---------
 
 This tutorial talks about "scenes and nodes", but so far there has been
 only *one* scene and *one* node! Don't worry, the next tutorial will
