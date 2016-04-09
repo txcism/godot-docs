@@ -2,15 +2,23 @@
 
 Scripting
 =========
+脚本
+====
 
 Introduction
 ------------
+介绍
+----
 
 Much has been said about tools that allow users to create video games
 without programming. It's been a dream for many independent developers
 to create games without learning how to code. This need has been around
 for a long time, even inside companies, where game designers wish to
 have more control of the game flow.
+
+很多工具都宣称它们的使用者不需要编程就能制作电子游戏。制做游戏而不需要
+学会怎么编程对很多独立游戏开发者来说是一个梦想。这种愿景由来已久，在游
+戏公司内部，游戏设计师都想对游戏流程多一些控制。
 
 Many products have been shipped promising a no-programming environment,
 but the result is often incomplete, too complex or inefficient compared
@@ -19,10 +27,16 @@ time. In fact, the general direction in game engines has been to add
 tools that try to reduce the amount of code that needs to be written for
 specific tasks, to speed up development.
 
+很多产品都承诺一个无需编程的环境，但结果往往是要么不完整，或者太复杂，或者
+与传统编程的方式比起来缺乏效率。因此，编程一直存在。实际上，？？？
+
 In that sense, Godot has taken some useful design decisions towards that
 goal. The first and most important is the scene system. The aim of it is
 not obvious at first, but works well later on. That is, to relieve
 programmers from the responsibility of architecting code.
+
+在这种意义下，为了实现了个目标，Godot采用了一些有用的设计决策。第一个也是
+最重要一个的设计就是场景系统。
 
 When designing games using the scene system, the whole project is
 fragmented into *complementary* scenes (not individual ones). Scenes
