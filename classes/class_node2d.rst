@@ -84,11 +84,15 @@ Member Function Description
 
 Set the position of the 2d node.
 
+设置 2D 节点的本地位置
+
 .. _class_Node2D_set_rot:
 
 - void  **set_rot**  **(** :ref:`float<class_float>` rot  **)**
 
 Set the rotation of the 2d node.
+
+设置 2D 节点的本地旋转
 
 .. _class_Node2D_set_scale:
 
@@ -96,11 +100,15 @@ Set the rotation of the 2d node.
 
 Set the scale of the 2d node.
 
+设置 2D 节点的本地缩放
+
 .. _class_Node2D_get_pos:
 
 - :ref:`Vector2<class_vector2>`  **get_pos**  **(** **)** const
 
 Return the position of the 2D node.
+
+返回 2D 节点的本地位置
 
 .. _class_Node2D_get_rot:
 
@@ -108,11 +116,15 @@ Return the position of the 2D node.
 
 Return the rotation of the 2D node.
 
+返回 2D 节点的本地旋转
+
 .. _class_Node2D_get_scale:
 
 - :ref:`Vector2<class_vector2>`  **get_scale**  **(** **)** const
 
 Return the scale of the 2D node.
+
+返回 2D 节点的本地缩放
 
 .. _class_Node2D_rotate:
 
@@ -148,6 +160,8 @@ Return the scale of the 2D node.
 
 Return the global position of the 2D node.
 
+返回 2D 节点的全局位置
+
 .. _class_Node2D_set_transform:
 
 - void  **set_transform**  **(** :ref:`Matrix32<class_matrix32>` xform  **)**
@@ -182,7 +196,7 @@ Return the global position of the 2D node.
 
 .. _class_Node2D_edit_set_pivot:
 
-- void  **edit_set_pivot**  **(** :ref:`Vector2<class_vector2>` pivot  **)**
+- void  **edit_set_pivot**  **(** :ref:`Vector2<class_vector2>` pivot  **)**g
 
 .. _class_Node2D_get_relative_transform_to_parent:
 
